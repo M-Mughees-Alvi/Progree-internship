@@ -1,0 +1,208 @@
+:root {
+  --bg-color: #d9e0c7;
+  --text-color: #234b36;
+  --navbar-color: #aec5a0;
+  --card-color: #ffffff;
+  --primary-color: #43865a;
+  --border-color: #c5d6c0;
+  --button-text: #ffffff;
+}
+body.dark {
+  --bg-color: #101713;
+  --text-color: #e0eee0;
+  --navbar-color: #1b3024;
+  --card-color: #1b241d;
+  --primary-color: #72b886;
+  --border-color: #365440;
+  --button-text: #101713;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 15px 20px;
+  background-color: var(--navbar-color);
+  color: var(--text-color);
+
+  border-bottom: 1px solid var(--border-color);
+}
+.navbar h2 {
+  margin: 0;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.page {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--card-color);
+  color: var(--text-color);
+
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+}
+
+input,
+select,
+button {
+  padding: 8px;
+  margin: 5px 5px 5px 0;
+  font-family: inherit;
+  font-size: 14px;
+  border-radius: 5px;
+}
+input,
+select {
+  background-color: var(--card-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+input {
+  width: 100%;
+}
+input:focus,
+select:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--button-text);
+
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.85;
+}
+
+.sort-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  color: var(--text-color);
+}
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+th {
+  background-color: var(--navbar-color);
+}
+
+tr:hover {
+  background-color: var(--navbar-color);
+}
+
+.recharts-text,
+.recharts-legend-item-text {
+  fill: var(--text-color);
+  color: var(--text-color);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .page {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  th,
+  td {
+    padding: 6px;
+  }
+}
+
+/* MOBILE PHONES */
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px 10px;
+  }
+
+  .navbar h2 {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .page {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  input,
+  select {
+    max-width: 100%;
+  }
+
+  th,
+  td {
+    padding: 5px;
+    font-size: 13px;
+  }
+}
