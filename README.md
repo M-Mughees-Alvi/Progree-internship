@@ -1,115 +1,128 @@
 # Progree Frontend Development Internship
 
-This repository contains the web development projects completed as part of my **Frontend Development Internship at Progree**.
+This repository contains independent web development projects completed as part of my **Frontend Development Internship at Progree**. Each task is maintained in its own folder.
 
 ## Task 2: Sip - Smart Water Bottle Landing Page
 
-A responsive, single-page marketing website for Sip, a fictional smart water bottle, built with HTML5 and CSS3.
+A responsive marketing landing page for a fictional smart water bottle, built with HTML5 and CSS3.
 
-### Features
+**Features**
 
-- Semantic HTML5 structure
 - Full-width hero section with background image and overlay text
 - Features and pricing sections using Flexbox
 - Responsive layouts for desktop, tablet, and mobile
-- Smooth scrolling, gradient transitions, card borders, and hover effects
-- CSS variables for colors, border radius, and transitions
-- Responsive breakpoints at 992px, 768px, and 480px
+- Smooth scrolling, gradients, and hover effects
+- CSS variables and responsive breakpoints
 
-### Technologies
+**Technologies:** HTML5, CSS3, Flexbox, media queries
 
-- HTML5
-- CSS3: Flexbox, media queries, CSS variables, and transitions
-
-### Getting Started
-
-1. Open the `Task2-marketing-landing-page/` folder.
-2. Keep `index.html`, `style.css`, and `hero-img.png` together.
-3. Open `index.html` in a modern web browser.
-
-No installation or build tools are required.
+**Run locally:** Open `Task2-marketing-landing-page/index.html` in a modern web browser. No installation required.
 
 ## Task 3: Weather Portal
 
 A responsive React application that lets users search for a city and view current weather using the OpenWeatherMap Current Weather API.
 
-### Features
+**Features**
 
-- Search by city name, such as `Faisalabad` or `Faisalabad, PK`
-- Display temperature, weather description, feels-like temperature, humidity, and wind speed
-- Loading feedback while weather data is fetched
-- Error handling for invalid API keys, unknown cities, and network problems
-- Responsive layout for phones, tablets, and desktops
-- Dark theme with yellow accents and CSS variables
+- Search by city name
+- Display temperature, weather conditions, feels-like temperature, humidity, and wind speed
+- Loading states and error handling
+- Responsive layout with a dark theme and yellow accents
 
-### Technologies
+**Technologies:** React 18, JavaScript, Vite, CSS3, OpenWeatherMap API
 
-- React 18
-- JavaScript
-- Vite
-- HTML5 and CSS3
-- OpenWeatherMap Current Weather API
+**Run locally:**
 
-### Getting Started
-
-1. Install Node.js (LTS) and npm.
-2. Get an API key from [OpenWeatherMap](https://openweathermap.org/).
+1. Install Node.js and npm.
+2. Obtain an API key from [OpenWeatherMap](https://openweathermap.org/).
 3. Open a terminal in `Task3-weather-portal-application/` and run:
   ```
   npm install
-  ```
-4. In `src/App.jsx`, replace the API key placeholder with your own key:
-  ```
-  const apiKey = "YOUR_OPENWEATHERMAP_API_KEY";
-  ```
-5. Start the development server:
-  ```
   npm run dev
   ```
-6. Open the local URL shown in the terminal, usually `http://localhost:5173`.
+4. Configure your API key in `src/App.jsx` using the existing placeholder.
+5. Open the local URL displayed in the terminal.
+
+**Production build:** Run `npm run build` inside the Task 3 folder.
 
 **Security:** Never commit a real API key to a public repository.
 
-### Production Build
+## Task 4: Enterprise Analytical Administration Portal
 
-Run `npm run build` inside the Task 3 directory. The generated files will be placed in `dist/`.
+A responsive React analytics dashboard featuring interactive charts, regional filtering, and a searchable, sortable product data table.
 
-### How It Works
+**Features**
 
-1. The user enters a city through the `SearchBox` component.
-2. `App.jsx` requests weather data using `fetch` and `async/await`.
-3. A loading message appears while the request is processed.
-4. Successful results are displayed by `WeatherCard`.
-5. Appropriate error messages appear if the request fails.
+- Monthly revenue and profit trend charts
+- Revenue comparisons by product using Recharts
+- Regional filtering for dashboard data
+- Case-insensitive search across product names, categories, and regions
+- Multi-column table sorting
+- Light and dark themes
+- Client-side navigation with React Router
+- Responsive design and Vercel routing support
+
+**Technologies:** React 19, React Router 7, Recharts 3, Vite 8, CSS
+
+**Run locally:**
+
+1. Open a terminal in `Task4-enterprise-analytical-administration-portal/`.
+2. Install dependencies and start the development server:
+  ```
+  npm install
+  npm run dev
+  ```
+3. Open the local URL displayed in the terminal.
+
+**Production build:** Run `npm run build` inside the Task 4 folder.
+
+**Data:** Uses local mock data; no backend, API keys, or external API requests are required.
 
 ## Repository Structure
 
 ```
 Progree-internship/
-|-- README.md
-|-- Task2-marketing-landing-page/
-|   |-- index.html
-|   |-- style.css
-|   `-- hero-img.png
-`-- Task3-weather-portal-application/
-    |-- README.md
-    |-- package.json
-    |-- package-lock.json
-    |-- index.html
-    |-- vite.config.js
-    |-- eslint.config.js
-    |-- .gitignore
-    `-- src/
-        |-- App.jsx
-        |-- index.css
-        |-- main.jsx
-        `-- components/
-            |-- SearchBox.jsx
-            `-- WeatherCard.jsx
+├── README.md
+├── Task2-marketing-landing-page/
+│   ├── index.html
+│   ├── style.css
+│   └── hero-img.png
+├── Task3-weather-portal-application/
+│   ├── README.md
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── index.html
+│   ├── vite.config.js
+│   ├── eslint.config.js
+│   └── src/
+│       ├── App.jsx
+│       ├── index.css
+│       ├── main.jsx
+│       └── components/
+│           ├── SearchBox.jsx
+│           └── WeatherCard.jsx
+└── Task4-enterprise-analytical-administration-portal/
+    ├── README.md
+    ├── package.json
+    ├── package-lock.json
+    ├── index.html
+    ├── vite.config.js
+    ├── eslint.config.js
+    ├── vercel.json
+    └── src/
+        ├── App.jsx
+        ├── data.js
+        ├── main.jsx
+        ├── styles.css
+        ├── components/
+        │   └── Navbar.jsx
+        └── pages/
+            ├── Dashboard.jsx
+            └── DataTable.jsx
 ```
 
 ## Author
 
-**Mughees Alvi**
+**Mughees Alvi**  
+Frontend Development Intern at Progree
 
-Frontend Development Intern at Progree.
